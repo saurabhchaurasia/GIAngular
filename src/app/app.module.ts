@@ -3,16 +3,48 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthorizeComponent } from './authorize/authorize.component';
+import { ResetComponent } from './reset/reset.component';
+import { ApiService } from './services/api.service';
+import { AuthenticateService } from './services/authenticate.service';
+import { HomeComponent } from './home/home.component';
+import { AdminComponent } from './admin/admin.component';
+import { ProfileComponent } from './profile/profile.component';
+import { RegisterComponent } from './register/register.component';
+import { TranscationsComponent } from './transcations/transcations.component';
+import { BuyComponent } from './buy/buy.component';
+import { RenewComponent } from './renew/renew.component';
+import { EstimateComponent } from './estimate/estimate.component';
+import { PaymentComponent } from './payment/payment.component';
+import { TicketComponent } from './ticket/ticket.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { HelpComponent } from './help/help.component';
+import { ClaimComponent } from './claim/claim.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuthorizeComponent,
+    ResetComponent,
+    HomeComponent,
+    AdminComponent,
+    ProfileComponent,
+    RegisterComponent,
+    TranscationsComponent,
+    BuyComponent,
+    RenewComponent,
+    EstimateComponent,
+    PaymentComponent,
+    TicketComponent,
+    AboutUsComponent,
+    HelpComponent,
+    ClaimComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ApiService, AuthenticateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
