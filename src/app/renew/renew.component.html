@@ -1,1 +1,19 @@
-<p>renew works!</p>
+<div class='container'>
+    <h4 class='btn-danger'>YOUR INSURANCE POLICIES</h4>
+</div>
+<div class='jumbotron'>
+    <table class="table table-sm table-hover">
+        <tr class='btn-success'>
+            <th>Policy NO</th>
+            <th>Insurance Type</th>
+            <th>MotorId</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let InsuranceData of InsuranceDataList">
+            <td>{{InsuranceData.InsuranceId}}</td>
+            <td>{{InsuranceData.Plans}}</td>
+            <td>{{InsuranceData.MotorId}}</td>
+            <td><a [routerLink]="['/renew2',InsuranceData.InsuranceId]" class="btn btn-primary btn-sm float-right" >Renew</a></td>
+        </tr>
+    </table>
+</div>

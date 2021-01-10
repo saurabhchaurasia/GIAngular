@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {HttpClientModule,HttpClient} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthorizeComponent } from './authorize/authorize.component';
@@ -20,7 +20,9 @@ import { TicketComponent } from './ticket/ticket.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HelpComponent } from './help/help.component';
 import { ClaimComponent } from './claim/claim.component';
-
+import {FormsModule} from '@angular/forms';
+import { PlanComponent } from './plan/plan.component';
+import { Renew2Component } from './renew2/renew2.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,11 +40,15 @@ import { ClaimComponent } from './claim/claim.component';
     TicketComponent,
     AboutUsComponent,
     HelpComponent,
-    ClaimComponent
+    ClaimComponent,
+    PlanComponent,
+    Renew2Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [ApiService, AuthenticateService],
   bootstrap: [AppComponent]
